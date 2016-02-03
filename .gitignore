@@ -4,8 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore IDE config
-/.idea
+# Ignore RubyMine IDE config
+**/.idea/workspace.xml
+**/.idea/tasks.xml
 
 # Ignore bundler config.
 /.bundle
