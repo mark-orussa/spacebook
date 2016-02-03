@@ -5,9 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore RubyMine IDE config
-/.idea
-**/.idea/workspace.xml
-**/.idea/tasks.xml
+/.idea/*
 
 # Ignore bundler config.
 /.bundle
