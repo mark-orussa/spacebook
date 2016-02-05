@@ -106,6 +106,10 @@ header {
     float: right;
   }
 }
+/* hides the regular menu */
+#menu {
+  display:none;
+}
 
 .makeButton {
   @include makeButton;
