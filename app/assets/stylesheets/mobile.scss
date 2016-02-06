@@ -56,25 +56,30 @@ body {
   margin: 0;
 }
 
+.alert {
+  color: red;
+}
+
 #content {
   margin: 1em auto;
   text-align: center;
-  p{
-    margin:0;
+  input[type=submit] {
+    font-size: 1rem;
+    margin: .5em 0;
+    color: white;
+    @include makeButton;
+  }
+  p {
+    margin: 0;
     padding: inherit;
   }
-  h2{
-    margin:0;
+  h2 {
+    margin: 0;
     padding: 0 0 1em 0;
   }
   form.new_user {
     .field:nth-child(3) {
       margin: .5em 0;
-    }
-    input[type=submit] {
-      font-size: 1rem;
-      margin: .5em 0;
-      @include makeButton;
     }
   }
 }
@@ -106,7 +111,7 @@ header {
   }
 }
 
-.makeButton{
+.makeButton {
   @include makeButton;
   text-decoration: none;
 }
