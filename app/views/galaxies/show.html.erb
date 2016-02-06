@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @galaxy.author %>
+</p>
+<br/>
+
+<p>
+  <strong>Image:</strong><br/>
+  <%= image_tag(@galaxy.image) %><br/>
+  <%= @galaxy.image %>
+</p>
+<br/>
+<p>
+  <strong>Content:</strong>
+  <%= @galaxy.content %>
+</p>
+<br/>
+<p>
+  <strong>Tag:</strong>
+  <%= @galaxy.tag %>
+</p>
+<br/>
+<%= link_to 'Edit', edit_galaxy_path(@galaxy) %> |
+<%= link_to 'Back', galaxies_path %>

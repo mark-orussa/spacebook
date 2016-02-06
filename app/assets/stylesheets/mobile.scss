@@ -115,3 +115,20 @@ header {
   @include makeButton;
   text-decoration: none;
 }
+
+#galaxy p {
+  text-align: left;
+}
+
+#galaxy span{
+  font-weight: bold;
+}
+
+#galaxy{
+  padding: 1% 2%;
+}
+
+#galaxy_form textarea{
+  width: 80%;
+  height: 16rem;
+}
