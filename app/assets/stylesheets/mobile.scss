@@ -138,10 +138,6 @@ header {
     color: #44b2f1;
   }
 }
-/* hides the regular menu */
-#menu {
-  display:none;
-}
 
 .makeButton {
   @include makeButton;
@@ -149,12 +145,11 @@ header {
 }
 
 footer {
+  background-color: #e8eff4;
   background: #072438 url(bg-footer.jpg) no-repeat center top;
   text-align: center;
-  background-color: #e8eff4;
   border-top: 1px solid #fdfcfc;
   min-height: 8.5em;
-  width: 100%;
   padding: .5em 0;
   //@include borderRadius;
 }

@@ -1,28 +1,27 @@
 <header>
-  <div >
+  <div>
     <%= image_tag 'imagePlaceholder.jpg', id: 'logo' %>
-
-      <nav>
-         <ul id="navigation">
-          <li class="selected">
-            <%= link_to('Home', user_session_path, id: 'loginLink') %>
-          </li>
-          <li>
-            <a href="profile.html">Profile</a>
-          </li>
-          <li>
-            <a href="account.html">Account</a>
-          </li>
-          <li>
-            <a href="main.html">Main</a>
-          </li>
-          <li>
-            <%= link_to('Login', user_session_path, id: 'loginLink') %>
-          </li>
-          <li>
-            <a href="registration.html">Register</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul id="navigation">
+        <li class="selected">
+          <%= link_to('Home', user_session_path, id: 'loginLink') %>
+        </li>
+        <li>
+          <a href="profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="account.html">Account</a>
+        </li>
+        <li>
+          <a href="main.html">Main</a>
+        </li>
+        <li>
+          <%= link_to('Login', user_session_path, id: 'loginLink') %>
+        </li>
+        <li>
+          <a href="registration.html">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
