@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+
+$(document).on('page:change', function() {
+    $('#menu').slicknav();
+
+});

@@ -1,8 +1,65 @@
 //Desktop
 @media only screen and (min-width: 1024px) {
+
+  /* --- nav start ---*/
+
+  .slicknav_menu {
+    display:none;
+  }
+
+  #menu {
+    display:block;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    li {
+      float: left;
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  li a:hover {
+    color: #23A6EA;
+  }
+
+  /*rules for the sub menu items*/
+  nav ul li ul {
+    z-index:99;
+    position: absolute;
+    margin: 0;
+    left: -999em; /* pushes the menu way off to the side */
+    width: 5em;
+    background-color: black;
+  }
+  nav ul li ul li { /* overides the float and line from the parent ul */
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    float: left;
+    border-right: none;
+  }
+
+  nav li:hover ul { /* this displays the menus as drop downs  */
+    left: auto;
+  }
+
+  /* --- nav end ---*/
+
   body {
     width: 64em;
     margin: 0 auto;
+  }
+
+  header{
+    height: 3.8em;
   }
 
 }

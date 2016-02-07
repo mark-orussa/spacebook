@@ -1,0 +1,18 @@
+
+<nav>
+
+  <ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Profile</a>
+      <ul>
+        <li><a href="#">item1</a></li>
+        <li><a href="#">item2</a></li>
+        <li><a href="#">item3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">My Galaxy</a></li>
+    <li><%= link_to('Registration', new_user_registration_path ) %></li>
+    <li><%= link_to('Login', user_session_path, id:'loginLink') %></li>
+  </ul>
+
+</nav>
