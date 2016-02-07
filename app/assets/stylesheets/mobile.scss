@@ -13,7 +13,7 @@ footer {
   text-align: center;
   background-color: rgb(7, 36, 56);
   color: rgb(3, 67, 111);
-  
+
 }
 
 header {
@@ -22,15 +22,15 @@ header {
   width: 100%;
   margin: 0;
   padding: 0;
+
+  nav {
+    font-size: 1.4rem;
+    float: right;
+  }
   #logo {
     display: block;
     text-align: left;
     margin: 0;
-    padding: 0;
-    width: 6em;
-  }
-  nav {
-    font-size: 1.4rem;
-    float: right;
+    padding: 5px;
   }
 }
