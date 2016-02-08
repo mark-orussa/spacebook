@@ -10,14 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_directory ./base_styles
  *= require_directory ./slicknav
+ *= require_tree
  *= require_self
  */
-/*@import "font-awesome-sprockets";*/
-/*@import "font-awesome";*/
-
-@import 'mobile';
-@import 'mobile-landscape';
-@import 'mobile-wide';
-@import 'tablet-and-up';
-@import 'home';
