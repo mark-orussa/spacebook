@@ -54,19 +54,19 @@ $borderRadiusAmount: .4rem;
 body {
   background: url(bg-body.jpg) repeat left top;
   font-size: 16px;
-  font-weight:300;
+  font-weight: 300;
   @include basicText;
   margin: 0;
 }
 
-form{
+form {
   background-color: white;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-a{
+a {
   color: white;
 }
 
@@ -97,44 +97,22 @@ a{
 }
 
 header {
+  display: block;
   //background: url(bg-header.png) repeat center top;
   background-color: black;
-  clear: both;
+  clear: right;
   width: 100%;
   padding: 1em 0 0;
   //text-align: right;
   #logo {
-    //display: block;
     text-align: left;
     margin: 0;
     padding: 0;
     width: 6em;
     color: white;
   }
-  #navigation {
-    display: inline-block;
-    height: 1.875em;
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
-    width: 100%
-  }
-  #navigation li {
-    float: right;
-    margin: 0 1em;
-    font-size: 1.4em;
-  }
-  #navigation li:first-child {
-    margin-left: 0;
-  }
-  #navigation li a {
-    color: #efefef;
-    line-height: 30px;
-    padding: 0;
-    text-decoration: none;
-  }
-  #navigation li a:hover, #navigation li.selected a {
-    color: #44b2f1;
+  nav {
+    display: none;
   }
 }
 
@@ -153,6 +131,6 @@ footer {
   //@include borderRadius;
 }
 
-#copy{
+#copy {
   color: #fff;
 }

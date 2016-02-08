@@ -9,7 +9,7 @@
             easingClose: 'swing',
             closedSymbol: '&#9658;',
             openedSymbol: '&#9660;',
-            prependTo: 'body',
+            prependTo: 'header',
             appendTo: '',
             parentTag: 'a',
             closeOnClick: false,
