@@ -1,0 +1,44 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {
+  -webkit-text-size-adjust: none;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+}
+
+
+
+
+#contentsHome p a {
+  color: #e8eff4;
+}
+
+#contentsHome p a:hover {
+  color: #0aa3fa;
+}
+
+#contentsHome p b {
+  display: block;
+}
+
+#contentsHome .body {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+/** Box below image **/
+
+

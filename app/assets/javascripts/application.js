@@ -12,8 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
+
+
+document.addEventListener("page:load", function(){
+    $('#menu').slicknav();
+});
 
 $(function(){
     $('#menu').slicknav();

@@ -1,32 +1,30 @@
-<div id="contentsHome">
-  <div id="adbox">
-    <div class="wrapper1 clearfix1">
-      <div class="info">
-        <h1>SpaceBook</h1>
+<div id="homeWrapper">
+  <div id="contentsHome">
+    <div id="adbox">
+      <div class="wrapper clearfix1">
+        <div class="info">
+          <h1>Spacebook</h1>
+        </div>
+      </div>
+      <%= image_tag 'bg-adbox.jpg' %>
+      <div class="highlight">
+        <h2>Keep in Contact with the World - <i>Privacy is our #1 goal!</i></h2>
       </div>
     </div>
-    <div class="highlight">
-      <h2>Keep in Contact with the World - <i>Privacy is our #1 goal!</i></h2>
-    </div>
-  </div>
-  <div id="infoP">
-    <div class="click-here">
-      <h1>Get Your Own Account Now!</h1>
-      <a href="index.html" class="btn2">Click Here!</a>
-    </div>
-    <h1 id="welcome">
-      Welcome to SpaceBook
-    </h1>
-
+    <div id="infoP">
+      <div class="click-here">
+        <h1>Get Your Own Account Now!</h1>
+        <%= link_to 'Click Here!', new_user_registration_path, class: 'btn2' %>
+      </div>
+      <h1 id="welcome">
+        Welcome to SpaceBook
+      </h1>
       <p id="last">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper
-        vehicula. Praesent aliquam semper massa et scelerisque. Suspendisse dapibus interdum diam, non varius nisl
-        laoreet at. Pellentesque imperdiet molestie sollicitudin. Sed nec magna nibh, sed interdum nisi. Mauris vel
-        pretium nibh. Morbi congue velit quis eros imperdiet ac el eifend elit condimentum. Nulla vestibulum dictum
-        tellus quis iaculis. Duis a diam vitae sem tristique vestibulum. Praesent dapibus, tortor nec hendrerit
-        pulvinar, lectus tortor viverra ante,
+        SpaceBook is a new social media platform designed to not irritate you. Do you like sand? How about a nagging
+        mother-in-law? We don't , and we think that social media platforms shouldn't be either. Instead of tracking your
+        movements across the internet and scaring you with ads for that lingerie you just looked at, we respect your
+        privacy by not sharing your activities with third parties. You get to decide what is shared once and for all.
       </p>
-
+    </div>
   </div>
 </div>
-
