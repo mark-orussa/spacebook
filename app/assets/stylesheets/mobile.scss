@@ -52,28 +52,17 @@ $borderRadiusAmount: .4rem;
 }
 
 body {
-  background: url(bg-body.jpg) repeat left top;
-  font-size: 16px;
-  font-weight: 300;
   @include basicText;
   margin: 0;
 }
 
-form {
-  background-color: white;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-a {
-  color: white;
+.alert {
+  color: red;
 }
 
 #content {
   margin: 1em auto;
   text-align: center;
-  width: 100%;
   input[type=submit] {
     font-size: 1rem;
     margin: .5em 0;
@@ -91,29 +80,39 @@ a {
   form.new_user {
     .field:nth-child(3) {
       margin: .5em 0;
-
     }
   }
 }
 
+footer {
+  text-align: center;
+  background-color: rgb(7, 36, 56);
+  color: rgb(3, 67, 111);
+  padding: .5em 0;
+  //@include borderRadius;
+}
+
 header {
-  display: block;
-  //background: url(bg-header.png) repeat center top;
   background-color: black;
-  clear: right;
+  clear: both;
   width: 100%;
-  padding: 1em 0 0;
-  //text-align: right;
+  margin: 0;
+  padding: 0;
   #logo {
+    display: block;
     text-align: left;
     margin: 0;
     padding: 0;
     width: 6em;
-    color: white;
   }
   nav {
-    display: none;
+    font-size: 1.4rem;
+    float: right;
   }
+}
+/* hides the regular menu */
+#menu {
+  display:none;
 }
 
 .makeButton {
@@ -121,16 +120,19 @@ header {
   text-decoration: none;
 }
 
-footer {
-  background-color: #e8eff4;
-  background: #072438 url(bg-footer.jpg) no-repeat center top;
-  text-align: center;
-  border-top: 1px solid #fdfcfc;
-  min-height: 8.5em;
-  padding: .5em 0;
-  //@include borderRadius;
+#galaxy p {
+  text-align: left;
 }
 
-#copy {
-  color: #fff;
+#galaxy span{
+  font-weight: bold;
+}
+
+#galaxy{
+  padding: 1% 2%;
+}
+
+#galaxy_form textarea{
+  width: 80%;
+  height: 16rem;
 }
