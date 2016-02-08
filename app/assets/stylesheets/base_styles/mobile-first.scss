@@ -86,15 +86,15 @@ body {
       margin: .5em 0;
     }
   }
-#homeWrapper{
-  width:100%;
-  background-color: black;
-  margin:-.5em;
-  width:105%;
-}
+  #homeWrapper {
+    width: 100%;
+    background-color: black;
+    margin: -.5em;
+    width: 105%;
+  }
   #contentsHome {
     overflow: hidden;
-    width:95%;
+    width: 95%;
     color: #e8eff4;
     margin: 0 auto;
     #adbox {
@@ -214,7 +214,38 @@ body {
     }
 
   }
-
+  .field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+    margin: 0 auto;
+  }
+  #error_explanation {
+    width: 100%;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px;
+      margin-bottom: 0px;
+      background-color: #c00;
+      color: #fff;
+    }
+    ul li {
+      font-size: 12px;
+      list-style: square;
+      text-align: left;
+    }
+  }
+  #notice {
+    color: green;
+  }
 }
 
 footer {
@@ -257,9 +288,9 @@ header {
   nav {
     font-size: 1rem;
     float: right;
-    padding:.5em;
-    ul{
-      padding:0;
+    padding: .5em;
+    ul {
+      padding: 0;
     }
   }
 }
