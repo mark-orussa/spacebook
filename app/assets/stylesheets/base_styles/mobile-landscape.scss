@@ -1,0 +1,38 @@
+//Mobile wide
+@media only screen and (min-width: 415px) {
+  header {
+    max-width: 800px;
+    margin: 0 auto;
+    .slicknav_menu {
+      display: none;
+    }
+    nav {
+      display: inline;
+      vertical-align: top;
+      //height: 1.875em;
+      //margin: 0 10px;
+      //padding: 0;
+      #menu {
+        display: inline;
+        list-style: none;
+        & li {
+          display: inline;
+          margin: 0 1em;
+          font-size: 1.4em;
+        }
+        & li a {
+          color: #efefef;
+          line-height: 30px;
+          padding: 0;
+          text-decoration: none;
+        }
+        & li a:hover, & li.selected a {
+          color: #44b2f1;
+        }
+      }
+    }
+  }
+  .slicknav_menu {
+    display: none;
+  }
+}

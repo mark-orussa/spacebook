@@ -1,2 +1,30 @@
-<h1> Hello!</h1>
-This is the home page!
+<div id="homeWrapper">
+  <div id="contentsHome">
+    <div id="adbox">
+      <div class="wrapper clearfix1">
+        <div class="info">
+          <h1>Spacebook</h1>
+        </div>
+      </div>
+      <%= image_tag 'bg-adbox.jpg' %>
+      <div class="highlight">
+        <h2>Keep in Contact with the World - <i>Privacy is our #1 goal!</i></h2>
+      </div>
+    </div>
+    <div id="infoP">
+      <div class="click-here">
+        <h1>Get Your Own Account Now!</h1>
+        <%= link_to 'Click Here!', new_user_registration_path, class: 'btn2' %>
+      </div>
+      <h1 id="welcome">
+        Welcome to SpaceBook
+      </h1>
+      <p id="last">
+        SpaceBook is a new social media platform designed to not irritate you. Do you like sand? How about a nagging
+        mother-in-law? We don't , and we think that social media platforms shouldn't be either. Instead of tracking your
+        movements across the internet and scaring you with ads for that lingerie you just looked at, we respect your
+        privacy by not sharing your activities with third parties. You get to decide what is shared once and for all.
+      </p>
+    </div>
+  </div>
+</div>

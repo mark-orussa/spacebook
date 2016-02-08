@@ -24,12 +24,12 @@ class GalaxiesController < ApplicationController
   def create
     @galaxy = Galaxy.new(galaxy_params)
     @galaxy.save
-    respond_with(@galaxy)
+    redirect_to(galaxies_path)
   end
 
   def update
     @galaxy.update(galaxy_params)
-    respond_with(@galaxy)
+    redirect_to(galaxies_path)
   end
 
   def destroy

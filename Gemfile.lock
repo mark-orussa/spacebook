@@ -140,8 +140,9 @@ DEPENDENCIES
   jquery-rails
   kaminari
   rails (= 4.1.8)
-  sass-rails (~> 4.0.3)
+  sass-rails
   sdoc (~> 0.4.0)
+  sprockets-rails
   sqlite3
   tinymce-rails
   turbolinks
