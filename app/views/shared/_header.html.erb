@@ -3,8 +3,8 @@
     <%= image_tag 'logo.png', id: 'logo' %>
     <navigation>
       <ul id="menu">
-        <li class="selected">
-          <%= link_to('Home', user_session_path, id: 'loginLink') %>
+        <li>
+          <%= link_to('Home', root_path) %>
         </li>
         <li>
           <a href="profile.html">Profile</a>
@@ -16,7 +16,7 @@
           <a href="main.html">Main</a>
         </li>
         <li>
-          <%= link_to('Login', user_session_path, id: 'loginLink') %>
+          <%= link_to('Login', user_session_path, id:'loginLink', class: 'makeButton') %>
         </li>
         <li>
           <a href="registration.html">Register</a>
