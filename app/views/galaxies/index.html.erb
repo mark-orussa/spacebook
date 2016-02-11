@@ -1,3 +1,6 @@
+
+    <%= text_field_tag 'search' %><%= submit_tag 'Search' %>
+
 <h1>My Galaxy</h1>
 <% if (current_user && current_user.email) %>
     <h2><%= current_user.email %>'s Galaxy</h2>
