@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210175442) do
+ActiveRecord::Schema.define(version: 20160214221619) do
 
   create_table "friends", force: true do |t|
     t.string   "sender"
-    t.string   "reciever"
+    t.string   "receiver"
     t.boolean  "friends"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "galaxies", force: true do |t|
-    t.string   "author"
+    t.integer  "author",     limit: 255
     t.text     "content"
     t.string   "image"
     t.string   "tag"

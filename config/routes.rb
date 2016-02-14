@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :galaxies
+  post 'galaxies/find_friends', to: 'galaxies#find_friends', as: 'find_friends'
+  # post 'someajax' => 'galaxies#find_friends'
+  resources :galaxies do
+    collection do
+      # post 'find_friends/:id', to: 'galaxies#find_friends', as: 'find_friends'
+    end
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

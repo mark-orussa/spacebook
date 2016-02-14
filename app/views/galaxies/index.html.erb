@@ -1,15 +1,19 @@
-
-    <%= text_field_tag 'search' %><%= submit_tag 'Search' %>
-
 <h1>My Galaxy</h1>
+<%= form_tag(find_friends_path, method: 'post', :remote => true) do %>
+    <%= text_field_tag(:find_friends) %>
+    <%= submit_tag 'Find Friends' %>
+<% end %>
+<%= content_tag 'div', '', id: 'findFriendsResults' %>
 <% if (current_user && current_user.email) %>
     <h2><%= current_user.email %>'s Galaxy</h2>
 <% end %>
 <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 <% @galaxies.each do |galaxy| %>
     <div id='galaxy'>
-      <%= image_tag(galaxy.image) %>
-      <p><span><%= galaxy.author %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
+      <% if galaxy.image != '' %>
+          <%= image_tag(galaxy.image) %>
+      <% end %>
+      <p><span><%= @current_user.email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
         <%= galaxy.content %></p>
       <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
       <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>

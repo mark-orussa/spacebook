@@ -1,35 +1,39 @@
 <%= form_for(@galaxy) do |f| %>
-  <% if @galaxy.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@galaxy.errors.count, "error") %> prohibited this galaxy from being saved:</h2>
+    <% if @galaxy.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@galaxy.errors.count, "error") %> prohibited this galaxy from being saved:</h2>
 
-      <ul>
-      <% @galaxy.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @galaxy.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div id="galaxy_form">
+      <div class="field">
+        <%= f.hidden_field :author, value: current_user.id %>
+      </div>
+      <div class="field">
+        <%= f.label :content %><br>
+        <%= f.text_area :content %>
+      </div>
+      <div class="field">
+        <%= f.label :image %><br>
+        <%= f.text_field :image %>
+      </div>
+      <div class="field">
+        <%= f.label :tag %><br>
+        <%= f.text_field :tag %>
+      </div>
     </div>
-  <% end %>
 
-<div id="galaxy_form">
-  <div class="field">
-    <%= f.hidden_field :author, value: current_user.email %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :tag %><br>
-    <%= f.text_field :tag %>
-  </div>
-</div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <% if action_name == 'edit' %>
+          <%= submit_tag 'Update Post' %>
+      <% else %>
+          <%= submit_tag 'Save Post' %>
+      <% end %>
+    </div>
 <% end %>
