@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :galaxies
+  resources :galaxies do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

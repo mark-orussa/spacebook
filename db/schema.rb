@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210175442) do
-
-  create_table "friends", force: true do |t|
-    t.string   "sender"
-    t.string   "reciever"
-    t.boolean  "friends"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20160206191053) do
 
   create_table "galaxies", force: true do |t|
     t.string   "author"

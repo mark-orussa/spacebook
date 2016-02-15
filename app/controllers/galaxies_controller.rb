@@ -5,7 +5,8 @@ class GalaxiesController < ApplicationController
   respond_to :html
 
   def index
-    @galaxies = Galaxy.where(author: current_user.email).order("created_at desc")
+    page = params[:page].to_i
+    @galaxies = Galaxy.where(author: current_user.email).order("created_at desc").page(page).per(5)
     respond_with(@galaxies)
   end
 
