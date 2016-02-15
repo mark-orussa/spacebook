@@ -42,6 +42,10 @@
     box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.6), 0 2px 2px rgba(0, 0, 0, 0.2);
   }
 }
+@mixin makeButtonSmall{
+  @include makeButton;
+  padding: 5px;
+}
 
 $borderRadiusAmount: .4rem;
 
@@ -304,8 +308,18 @@ header {
   @include makeButton;
   text-decoration: none;
 }
+.makeButtonSmall{
+  @include  makeButtonSmall;
+}
 
-#galaxy p {
+.postsContainer span {
+  text-align: left;
+}
+.postsContainer {
+  padding: 1% 1%;
+}
+
+#galaxy p, #galaxy a {
   text-align: left;
 }
 
@@ -314,7 +328,7 @@ header {
 }
 
 #galaxy {
-  padding: 1% 2%;
+  padding: 0 2%;
 }
 
 #galaxy_form textarea {

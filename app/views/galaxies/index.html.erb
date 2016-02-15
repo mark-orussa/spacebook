@@ -2,7 +2,8 @@
 <% if (current_user && current_user.email) %>
     <h2><%= current_user.email %>'s Galaxy</h2>
 <% end %>
-<%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
+<%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %><br/><br/>
+<div class="postsContainer"><span><%= paginate @galaxies %></span>
 <% @galaxies.each do |galaxy| %>
     <div id='galaxy'>
       <%= image_tag(galaxy.image) %>
@@ -12,3 +13,4 @@
       <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
     </div>
 <% end %>
+</div>
