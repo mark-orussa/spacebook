@@ -2,7 +2,7 @@ class GalaxiesController < ApplicationController
   before_action :set_galaxy, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  respond_to :html, :js
+  respond_to :html
 
   def index
     @galaxies = Galaxy.where(author: current_user.id).order("created_at desc")
@@ -38,27 +38,38 @@ class GalaxiesController < ApplicationController
   end
 
   def find_friends
-    if params[:find_friends] != ''
-      find_friends = Galaxy.find_friends(params, current_user)
+    if params.has_key?(:find_friends) && params[:find_friends] != ''
+      find_friends = Galaxy.find_friends(params[:find_friends], current_user)
       @friends = Array.new
-      @output = ""
-      find_friends.each do |friend|
-        @friends << friend.email
-        @output += '<div>' + friend.email + '</div>'
+      find_friends.find_each do |friend|
+        @friends << friend
       end
-    elsif params[:add_friend] != ''
-
+      # respond_to :js
     else
-      @friends = ''
-    end
-    respond_to do |format|
-      # format.html { redirect_to @user, notice: 'User was successfully created.' }
-      format.js
-      # format.js { j render :partial => "find_friends.html.erb", :locals => { friends: @friends}}
+      respond_to do |format|
+        format.js { render file: 'galaxies/find_friends_empty' }
+      end
+      # render :nothing => true, :status => :ok
     end
   end
 
+
+  def add_friend
+    if params.has_key?(:friend_id) && params.has_key?(:friend_email)
+      @add_friend = params
+      Galaxy.add_friend(params, current_user)
+      # flash[:notice] = "Added Friend"
+    else
+      render :nothing => true, :status => :ok
+    end
+  end
+
+  def get_friends
+    Galaxy.get_friends(current_user)
+  end
+
   private
+
   def set_galaxy
     @galaxy = Galaxy.find(params[:id])
   end
@@ -66,4 +77,5 @@ class GalaxiesController < ApplicationController
   def galaxy_params
     params.require(:galaxy).permit(:author, :content, :image, :tag)
   end
+
 end

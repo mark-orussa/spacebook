@@ -13,7 +13,8 @@
  *= require_directory ./base_styles
  *= require_directory ./slicknav
  *= require_directory ./views
-
  *= require_tree
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";

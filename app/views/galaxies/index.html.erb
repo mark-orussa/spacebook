@@ -1,13 +1,15 @@
-<h1>My Galaxy</h1>
-<%= form_tag(find_friends_path, method: 'post', :remote => true) do %>
-    <%= text_field_tag(:find_friends) %>
-    <%= submit_tag 'Find Friends' %>
-<% end %>
-<%= content_tag 'div', '', id: 'findFriendsResults' %>
-<% if (current_user && current_user.email) %>
-    <h2><%= current_user.email %>'s Galaxy</h2>
-<% end %>
-<%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
+<div id="galaxyTopContainer">
+  <h1>My Galaxy</h1>
+  <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
+      <%= text_field_tag(:find_friends) %>
+      <%= submit_tag 'Find Friends' %>
+  <% end %>
+  <%= content_tag 'div', '', id: 'findFriendsResults' %>
+  <% if (current_user && current_user.email) %>
+      <h2><%= current_user.email %>'s Galaxy</h2>
+  <% end %>
+  <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
+</div>
 <% @galaxies.each do |galaxy| %>
     <div id='galaxy'>
       <% if galaxy.image != '' %>
@@ -19,3 +21,6 @@
       <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
     </div>
 <% end %>
+<div id="myFriends">
+  <h3>My Friends</h3>
+</div>

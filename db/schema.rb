@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214221619) do
+ActiveRecord::Schema.define(version: 20160215012530) do
 
   create_table "friends", force: true do |t|
-    t.string   "sender"
-    t.string   "receiver"
+    t.string   "user_id"
+    t.string   "recipient_id"
     t.boolean  "friends"
     t.datetime "created_at"
     t.datetime "updated_at"

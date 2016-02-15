@@ -58,15 +58,15 @@ body {
   color: black;
 }
 
-.alert {
-  color: red;
-}
-
 #content {
+  clear: both;
   background-color: white;
   margin: 0 auto;
   padding: .5em;
   text-align: center;
+  position: relative;
+  overflow: auto;
+  zoom: 1;
   input[type=submit] {
     font-size: 1rem;
     margin: .5em 0;
@@ -85,12 +85,6 @@ body {
     .field:nth-child(3) {
       margin: .5em 0;
     }
-  }
-  #homeWrapper {
-    width: 100%;
-    background-color: black;
-    margin: -.5em;
-    width: 105%;
   }
   #contentsHome {
     overflow: hidden;
@@ -214,6 +208,39 @@ body {
     }
 
   }
+  #galaxy {
+    position: relative;
+    float: left;
+    padding: 1% 2%;
+    p {
+      text-align: left;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+
+  #galaxy_form textarea {
+    width: 80%;
+    height: 16rem;
+  }
+
+  #galaxyTopContainer {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    float:left;
+    h1, #findFriendsForm {
+      display: block;
+    }
+  }
+  #homeWrapper {
+    width: 100%;
+    background-color: black;
+    margin: -.5em;
+    width: 105%;
+  }
+
   .field_with_errors {
     padding: 2px;
     background-color: red;
@@ -243,12 +270,15 @@ body {
       text-align: left;
     }
   }
-  #notice {
-    color: green;
+  
+  #myFriends{
+    float:left;
+    position: relative;
   }
 }
 
 footer {
+  clear: both;
   text-align: center;
   background-color: rgb(7, 36, 56);
   color: rgb(3, 67, 111);
@@ -295,6 +325,10 @@ header {
   }
 }
 
+.hide {
+  display: none;
+}
+
 /* hides the regular menu */
 #menu {
   display: none;
@@ -305,19 +339,9 @@ header {
   text-decoration: none;
 }
 
-#galaxy p {
-  text-align: left;
+.alert, .red {
+  color: red;
 }
-
-#galaxy span {
-  font-weight: bold;
-}
-
-#galaxy {
-  padding: 1% 2%;
-}
-
-#galaxy_form textarea {
-  width: 80%;
-  height: 16rem;
+.notice {
+  color: green;
 }

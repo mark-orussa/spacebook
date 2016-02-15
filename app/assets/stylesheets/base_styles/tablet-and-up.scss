@@ -18,5 +18,24 @@
       margin: 0 auto;
       width: 80%;
     }
+    #galaxy {
+      width: 80%;
+    }
+    #galaxyTopContainer {
+      #findFriendsForm {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      #findFriendsResults {
+        position:absolute;
+        right:0;
+        width: 20em;
+        z-index: 10;
+      }
+    }
+    #myFriends {
+      width: 20%;
+    }
   }
 }

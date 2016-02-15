@@ -1,8 +1,9 @@
+<%= content_tag( 'div','<i class="fa fa-times-circle-o"></i>'.html_safe, id: 'findFriendsResultsClose') %>
 <h3>Find Friends</h3>
 <% if friends.count > 0 %>
     <% friends.each do |friend| %>
-        <%= form_tag(find_friends_path, method: 'post', :remote => true) do %>
-            <%= friend %> <%= hidden_field_tag 'add_friend', friend %><%= submit_tag 'Add Friend', class: 'makeButton' %>
+        <%= form_tag(add_friend_path, method: 'post', id: "add_friend_#{friend.id}", :remote => true) do %>
+            <%= friend.email %> <%= hidden_field_tag 'friend_email', friend.email %><%= hidden_field_tag 'friend_id', friend.id %><%= submit_tag 'Add Friend', class: 'makeButton' %>
         <% end %>
     <% end %>
 <% else %>
