@@ -323,15 +323,28 @@ header {
   text-align: left;
 }
 
-#galaxy span {
+#galaxy p span {
   font-weight: bold;
 }
 
 #galaxy {
-  padding: 0 2%;
+  padding: 1% 2%;
 }
 
 #galaxy_form textarea {
   width: 80%;
   height: 16rem;
 }
+
+.page, .next, .last, .prev, .first {
+  @include makeButtonSmall;
+}
+
+.page a, .next a, .last a, .prev a, .first a {
+  text-decoration: none;
+}
+
+.page a:visited, .next a:visited, .last a:visited, .prev a:visited, .first a:visited {
+  color: white;
+}
+
