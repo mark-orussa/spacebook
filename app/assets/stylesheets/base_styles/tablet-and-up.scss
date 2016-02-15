@@ -18,7 +18,8 @@
       margin: 0 auto;
       width: 80%;
     }
-    #galaxy {
+    #galaxies {
+      float: left;
       width: 80%;
     }
     #galaxyTopContainer {
@@ -32,9 +33,11 @@
         right:0;
         width: 20em;
         z-index: 10;
+        @include boxShadow;
       }
     }
     #myFriends {
+      float: left;
       width: 20%;
     }
   }

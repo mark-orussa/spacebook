@@ -10,8 +10,9 @@
   <% end %>
   <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 </div>
+<div id="galaxies">
 <% @galaxies.each do |galaxy| %>
-    <div id='galaxy'>
+    <div class='galaxy'>
       <% if galaxy.image != '' %>
           <%= image_tag(galaxy.image) %>
       <% end %>
@@ -21,6 +22,12 @@
       <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
     </div>
 <% end %>
+</div>
 <div id="myFriends">
   <h3>My Friends</h3>
+  <ul>
+    <% @friends.each do |friend| %>
+<%=  content_tag 'li', friend.email %>
+    <% end %>
+  </ul>
 </div>

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215012530) do
+ActiveRecord::Schema.define(version: 20160215070004) do
 
   create_table "friends", force: true do |t|
     t.string   "user_id"
-    t.string   "recipient_id"
+    t.string   "friend_id"
     t.boolean  "friends"
     t.datetime "created_at"
     t.datetime "updated_at"
