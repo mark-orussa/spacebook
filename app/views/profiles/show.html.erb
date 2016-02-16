@@ -1,24 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+<div id="showPage">
 
-<p>
-  <strong>Age:</strong>
-  <%= @profile.age %>
-</p>
 
-<p>
-  <strong>Dob:</strong>
-  <%= @profile.dob %>
-</p>
+  <div id="avatar">
+    <% if @profile.avatar_image != nil %>
+        <%= image_tag @profile.avatar_image %>
 
-<p>
-  <strong>Email:</strong>
-  <%= @profile.email %>
-</p>
+    <% else%>
+        <%= image_tag 'missing.jpg' %>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+    <% end %>
+
+  </div>
+  <div id="profile_content">
+    <p>
+      <strong>Name:</strong>
+      <%= @profile.name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @profile.email %>
+    </p>
+
+    <p>
+      <strong>Age:</strong>
+      <%= @profile.age %>
+    </p>
+
+    <p>
+      <strong>Dob:</strong>
+      <%= @profile.dob %>
+    </p>
+
+    <%= link_to 'Edit', edit_profile_path(@profile) %>
+
+
+
+  </div>
+
+</div>
