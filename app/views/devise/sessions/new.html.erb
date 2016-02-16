@@ -2,7 +2,17 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div id=""formStyle>
-    <div class="field">
+      <div class="field">
+        <%= f.label :FirstName %><br/>
+        <%= f.text_field :FirstName, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :LastName %><br/>
+        <%= f.text_field :LastName %>
+      </div>
+
+      <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
