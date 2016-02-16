@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   # Added confirmable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  has_one :galaxy
+  has_many :friends
 end

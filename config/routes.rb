@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  post 'galaxies/find_friends', to: 'galaxies#find_friends', as: 'find_friends'
+  post 'galaxies/add_friend', to: 'galaxies#add_friend', as: 'add_friend'
+  post 'galaxies/get_friends', to: 'galaxies#get_friends', as: 'get_friends'
+  # post 'someajax' => 'galaxies#find_friends'
   resources :galaxies do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
+    collection do
+      # post 'find_friends/:id', to: 'galaxies#find_friends', as: 'find_friends'
+    end
   end
 
   devise_for :users

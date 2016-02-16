@@ -1,0 +1,5 @@
+/**
+ * Created by markproaudio on 2/14/16.
+ */
+$("form#add_friend_<%= @add_friend[:friend_id] %>").before("<%= j render partial: 'add_friends' %>").remove();
+$("#myFriends ul").prepend("<%= @add_friend[:friend_email] %>")
