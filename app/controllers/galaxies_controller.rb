@@ -7,7 +7,11 @@ class GalaxiesController < ApplicationController
 
   def index
     page = params[:page].to_i
-    @galaxies = Galaxy.where(author: current_user.id).order("created_at desc").page(page).per(5)
+    @universe_ids = [current_user.id]
+    @friends.each do |friend|
+      @universe_ids << friend.id
+    end
+    @galaxies = Galaxy.where(author: [@universe_ids]).order("created_at desc").page(page).per(5)
     respond_with(@galaxies)
   end
 
