@@ -5,17 +5,17 @@
 
       <div class="field">
         <%= f.label :FirstName %><br/>
-        <%= f.text_field :firstname, autofocus: true %>
+        <%= f.text_field :fName, autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :LastName %><br/>
-        <%= f.text_field :lastname %>
+        <%= f.text_field :lName %>
       </div>
 
       <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
