@@ -10,7 +10,7 @@
   <% end %>
   <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 </div>
-<div id="galaxies">
+<div id="galaxies"><span><%= paginate @galaxies %></span>
 <% @galaxies.each do |galaxy| %>
     <div class='galaxy'>
       <% if galaxy.image != '' %>
