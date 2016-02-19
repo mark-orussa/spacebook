@@ -30,6 +30,7 @@ class GalaxiesController < ApplicationController
   def create
     @galaxy = Galaxy.new(galaxy_params)
     @galaxy.save
+
     redirect_to(galaxies_path)
   end
 
@@ -58,6 +59,7 @@ class GalaxiesController < ApplicationController
       # render :nothing => true, :status => :ok
     end
   end
+
 
 
   def add_friend
