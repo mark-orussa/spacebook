@@ -1,3 +1,4 @@
+<div id="galaxyStyle">
 <div id="galaxyTopContainer">
   <h1>My Galaxy</h1>
   <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
@@ -10,13 +11,13 @@
   <% end %>
   <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 </div>
-<div id="galaxies"><span><%= paginate @galaxies %></span>
+<div id="galaxies" class="border"><span><%= paginate @galaxies %></span>
 <% @galaxies.each do |galaxy| %>
     <div class='galaxy'>
       <% if galaxy.image != '' %>
           <%= image_tag(galaxy.image) %>
       <% end %>
-      <p><span><%= @current_user.email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
+      <p ><span><%= @current_user.email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span><br>
         <%= galaxy.content %></p>
       <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
       <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
@@ -30,4 +31,5 @@
 <%=  content_tag 'li', friend.email %>
     <% end %>
   </ul>
+</div>
 </div>
