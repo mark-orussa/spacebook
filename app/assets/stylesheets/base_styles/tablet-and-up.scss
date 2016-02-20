@@ -18,10 +18,7 @@
       margin: 0 auto;
       width: 80%;
     }
-    #galaxies {
-      float: left;
-      width: 80%;
-    }
+
     #galaxyTopContainer {
       #findFriendsForm {
         position: absolute;
@@ -37,8 +34,21 @@
       }
     }
     #myFriends {
-      float: left;
+      float: right;
       width: 20%;
+    }
+  }
+
+  #galaxies {
+    .galaxy {
+      padding: 1% 2%;
+      width: 360px;
+      p {
+        text-align: center;
+      }
+      span {
+        font-weight: bold;
+      }
     }
   }
 }
