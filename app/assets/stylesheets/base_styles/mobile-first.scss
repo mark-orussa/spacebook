@@ -258,7 +258,7 @@ ul {
       clear: both;
       margin-top: 3.125rem;
       padding: 1% 2%;
-      max-width: 80%;
+      max-width: 900%;
       margin-left: auto;
       margin-right: auto;
       p {
@@ -270,6 +270,9 @@ ul {
         font-weight: bold;
       }
     }
+  }
+  #galaxies img{
+    width: 100%;
   }
   #homeWrapper {
     width: 100%;
