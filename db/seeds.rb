@@ -19,6 +19,8 @@ post_attributes.each do |attributes|
   PrivacyLevel.where(attributes).first_or_create
 end
 
+Galaxy.where(privacy_id: nil).update_all(privacy_id: 2)
+
 =begin
 10.times do
   a = Galaxy.create(

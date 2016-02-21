@@ -86,7 +86,7 @@ class GalaxiesController < ApplicationController
   end
 
   def galaxy_params
-    params.require(:galaxy).permit(:author, :content, :image, :tag)
+    params.require(:galaxy).permit(:author, :content, :image, :tag, :privacy_id)
   end
 
 end
