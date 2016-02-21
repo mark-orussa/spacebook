@@ -11,8 +11,7 @@ class Galaxy < ActiveRecord::Base
                .where(user[:email].matches(query_string))
                .where(user[:id].not_eq(current_user_id))
                .where("id NOT IN (SELECT user_id AS friendID FROM #{:friends} WHERE #{:friend_id} = #{current_user_id} UNION SELECT #{:friend_id} AS friendID FROM #{:friends} WHERE user_id = #{current_user_id})")
-    .order(user[:email])
-
+               .order(user[:email])
   end
 
   def self.add_friend(friend_id, current_user_id)
