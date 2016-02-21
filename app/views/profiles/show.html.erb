@@ -4,8 +4,8 @@
 
 
   <div id="avatar">
-    <% if @profile.avatar_image != nil %>
-        <%= image_tag @profile.avatar_image %>
+    <% if @user.avatar != nil %>
+        <%= image_tag @user.avatar %>
 
     <% else%>
         <%= image_tag 'missing.jpg' %>
@@ -15,26 +15,35 @@
   </div>
   <div id="profile_content">
     <p>
-      <strong>Name:</strong>
-      <%= @profile.name %>
+      <strong>First Name:</strong>
+      <%= @user.fName %>
+    </p>
+    <p>
+      <strong>Last Name:</strong>
+      <%= @user.lName %>
+    </p>
+
+    <p>
+      <strong>Comment: </strong>
+      <%= @user.comments %>
     </p>
 
     <p>
       <strong>Email:</strong>
-      <%= @profile.email %>
+      <%= @user.email %>
     </p>
 
     <p>
       <strong>Age:</strong>
-      <%= @profile.age %>
+      <%= @user.age %>
     </p>
 
     <p>
       <strong>Dob:</strong>
-      <%= @profile.dob %>
+      <%= @user.dob %>
     </p>
 
-    <%= link_to 'Edit', edit_profile_path(@profile) %>
+    <%= link_to 'Edit', edit_profile_path(@user) %>
 
 
 
