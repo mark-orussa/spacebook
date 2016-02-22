@@ -1,6 +1,10 @@
 class Galaxy < ActiveRecord::Base
   belongs_to :user
 
+  def get_user(galaxy)
+    User.find(galaxy.author)
+  end
+
   def self.find_friends(search_for, current_user_id)
     user = User.arel_table
     query_string = "%#{search_for}%"

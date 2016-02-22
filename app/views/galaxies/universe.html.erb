@@ -1,14 +1,12 @@
 <div id="galaxyTopContainer">
-  <% if @user && @user.id == current_user.id %>
-      <h1>My Galaxy</h1>
-  <% end %>
+  <h1>My Universe</h1>
   <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
       <%= text_field_tag(:find_friends) %>
       <%= submit_tag 'Find Friends' %>
   <% end %>
   <%= content_tag 'div', '', id: 'findFriendsResults' %>
-  <% if @user && @user.email %>
-      <h2><%= @user.email %>'s Galaxy</h2>
+  <% if (current_user && current_user.email) %>
+      <h2><%= current_user.email %>'s Universe</h2>
   <% end %>
   <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 </div>

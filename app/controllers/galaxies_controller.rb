@@ -1,11 +1,22 @@
 class GalaxiesController < ApplicationController
-  before_action :set_galaxy, only: [:show, :edit, :update, :destroy]
-  before_action :get_friends, only: :index
+  before_action :set_galaxy, only: [:show, :edit, :update, :destroy], except: :universe
+  before_action :get_friends, only: [:index, :universe]
   before_action :authenticate_user!
 
   respond_to :html
 
   def index
+    if params[:user_id] && User.find(params[:user_id])
+      @user = User.find(params[:user_id])
+    else
+      @user = current_user
+    end
+    page = params[:page].to_i
+    @galaxies = Galaxy.where(author: [@user.id]).order("created_at desc").page(page).per(5)
+    respond_with(@galaxies)
+  end
+
+  def universe
     page = params[:page].to_i
     @universe_ids = [current_user.id]
     @friends.each do |friend|
