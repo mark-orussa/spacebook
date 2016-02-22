@@ -41,6 +41,7 @@ class GalaxiesController < ApplicationController
   def create
     @galaxy = Galaxy.new(galaxy_params)
     @galaxy.save
+
     redirect_to(galaxies_path)
   end
 
@@ -71,6 +72,7 @@ class GalaxiesController < ApplicationController
   end
 
 
+
   def add_friend
     if params.has_key?(:friend_id) && params.has_key?(:friend_email)
       @add_friend = params
@@ -95,7 +97,7 @@ class GalaxiesController < ApplicationController
   end
 
   def galaxy_params
-    params.require(:galaxy).permit(:author, :content, :image, :tag)
+    params.require(:galaxy).permit(:author, :content, :image, :tag, :privacy_id)
   end
 
 end

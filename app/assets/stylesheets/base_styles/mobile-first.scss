@@ -227,21 +227,8 @@ ul {
       padding: 0 0 30px;
       text-align: justify;
     }
-
   }
 
-  #galaxies {
-    .galaxy {
-      position: relative;
-      padding: 1% 2%;
-      p {
-        text-align: left;
-      }
-      span {
-        font-weight: bold;
-      }
-    }
-  }
 
   #galaxy_form textarea {
     width: 80%;
@@ -249,13 +236,41 @@ ul {
   }
 
   #galaxyTopContainer {
-    margin: 0 auto;
+    margin: 3.125rem auto;
     width: 100%;
     position: relative;
     float: left;
     h1, #findFriendsForm {
       display: block;
     }
+    .postLook{
+      outline: 4px;
+      color: red;
+    }
+  }
+  #galaxies {
+    .galaxy {
+      position: relative;
+      background-color: white;
+      border: solid 3px #016F94;
+      clear: both;
+      margin-top: 3.125rem;
+      padding: 1% 2%;
+      max-width: 900%;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        margin-top: 0.3125rem;
+        text-align: center;
+        max-width: 100%;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  #galaxies img{
+    width: 100%;
   }
   #homeWrapper {
     width: 100%;
@@ -387,7 +402,7 @@ header {
 }
 
 .page a, .next a, .last a, .prev a, .first a {
-  text-decoration: none;
+  color:white;
 }
 
 .page a:visited, .next a:visited, .last a:visited, .prev a:visited, .first a:visited {

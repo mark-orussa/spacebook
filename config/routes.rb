@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   post 'galaxies/find_friends', to: 'galaxies#find_friends', as: 'find_friends'
   post 'galaxies/add_friend', to: 'galaxies#add_friend', as: 'add_friend'
   post 'galaxies/get_friends', to: 'galaxies#get_friends', as: 'get_friends'
+
+  get 'user/{:id}', to: 'galaxies#get_user', as: 'get_user'
   # post 'someajax' => 'galaxies#find_friends'
   resources :galaxies do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
   # TODO: replace galaxies/index query string with something like below:
   #   get 'galaxies/index/:user_id', to: 'galaxies#index', as: 'index/:user_id'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
