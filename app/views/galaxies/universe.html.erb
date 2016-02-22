@@ -1,0 +1,39 @@
+<div id="galaxyTopContainer">
+  <h1>My Universe</h1>
+  <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
+      <%= text_field_tag(:find_friends) %>
+      <%= submit_tag 'Find Friends' %>
+  <% end %>
+  <%= content_tag 'div', '', id: 'findFriendsResults' %>
+  <% if (current_user && current_user.email) %>
+      <h2><%= current_user.email %>'s Universe</h2>
+  <% end %>
+  <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
+</div>
+<div id="galaxies"><span><%= paginate @galaxies %></span>
+  <% @galaxies.each do |galaxy| %>
+      <div class='galaxy'>
+        <% if galaxy.image != '' %>
+            <%= image_tag(galaxy.image) %>
+        <% end %>
+        <p>
+          <span><%= galaxy.get_user(galaxy).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
+          <% # This get_user() method is kind of lame, but galaxy.user returns nil  %>
+          <%= galaxy.content %></p>
+        <% if galaxy.author == current_user.id %>
+            <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
+            <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
+        <% end %>
+      </div>
+  <% end %>
+</div>
+<div id="myFriends">
+  <h3>My Friends</h3>
+  <ul>
+    <% @friends.each do |friend| %>
+        <li>
+          <%= link_to friend.email, :action => 'index', :user_id => friend.id %>
+        </li>
+    <% end %>
+  </ul>
+</div>

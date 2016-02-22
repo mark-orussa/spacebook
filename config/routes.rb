@@ -14,6 +14,12 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'universe', to: 'galaxies#universe', as: 'universe' do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+  # TODO: replace galaxies/index query string with something like below:
+  #   get 'galaxies/index/:user_id', to: 'galaxies#index', as: 'index/:user_id'
+
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
