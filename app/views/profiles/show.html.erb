@@ -2,51 +2,53 @@
 
 <div id="showPage">
 
+  <div id="wrapper">
+    <div id="avatar">
+      <% if @user.avatar != nil %>
+          <%= image_tag @user.avatar %>
 
-  <div id="avatar">
-    <% if @user.avatar != nil %>
-        <%= image_tag @user.avatar %>
+      <% else%>
+          <%= image_tag 'missing.jpg' %>
 
-    <% else%>
-        <%= image_tag 'missing.jpg' %>
+      <% end %>
 
-    <% end %>
+    </div>
 
-  </div>
-  <div id="profile_content">
-    <p>
-      <strong>First Name:</strong>
-      <%= @user.fName %>
-    </p>
-    <p>
+    <div id="fname">
+      <strong>First Name:</strong><%= @user.fName %>
+    </div>
+
+    <div id="fname">
       <strong>Last Name:</strong>
       <%= @user.lName %>
-    </p>
+    </div>
 
-    <p>
-      <strong>Comment: </strong>
-      <%= @user.comments %>
-    </p>
-
-    <p>
+    <div>
       <strong>Email:</strong>
       <%= @user.email %>
-    </p>
+    </div>
 
-    <p>
+    <div>
       <strong>Age:</strong>
       <%= @user.age %>
-    </p>
+    </div>
 
-    <p>
+    <div>
       <strong>Dob:</strong>
       <%= @user.dob %>
-    </p>
+    </div>
+
+  </div>
+
+  <div id="comment">
+    <strong>Comment</strong></br>
+    <%= @user.comments %>
+  </div>
 
     <%= link_to 'Edit', edit_profile_path(@user) %>
 
 
 
-  </div>
+
 
 </div>
