@@ -11,9 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220233820) do
+ActiveRecord::Schema.define(version: 20160221183215) do
 
   create_table "friends", force: true do |t|
+    t.text    "user_id"
+    t.text    "friend_id"
+    t.integer "friends"
+    t.text    "created_at"
+    t.text    "updated_at"
+  end
+
+  create_table "friends_old", force: true do |t|
     t.string   "user_id"
     t.string   "friend_id"
     t.boolean  "friends"
@@ -28,6 +36,14 @@ ActiveRecord::Schema.define(version: 20160220233820) do
     t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "privacy_id"
+  end
+
+  create_table "privacy_levels", force: true do |t|
+    t.string   "display"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "profiles", force: true do |t|
@@ -40,11 +56,11 @@ ActiveRecord::Schema.define(version: 20160220233820) do
   end
 
   create_table "users", force: true do |t|
-    t.text     "email",                  default: "", null: false
-    t.text     "encrypted_password",     default: "", null: false
-    t.text     "reset_password_token"
-    t.text     "reset_password_sent_at"
-    t.text     "remember_created_at"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.text     "current_sign_in_at"
     t.text     "last_sign_in_at"
