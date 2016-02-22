@@ -14,13 +14,14 @@
     }
     nav {
       display: inline;
+      font-size: .95em;
       vertical-align: top;
       #menu {
         display: inline;
         list-style: none;
         & li {
           display: inline;
-          margin: 0 1em;
+          margin: 0 .5em;
           font-size: 1.4em;
         }
         & li a {
