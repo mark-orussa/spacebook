@@ -14,14 +14,6 @@
 ActiveRecord::Schema.define(version: 20160221183215) do
 
   create_table "friends", force: true do |t|
-    t.text    "user_id"
-    t.text    "friend_id"
-    t.integer "friends"
-    t.text    "created_at"
-    t.text    "updated_at"
-  end
-
-  create_table "friends_old", force: true do |t|
     t.string   "user_id"
     t.string   "friend_id"
     t.boolean  "friends"
@@ -74,6 +66,10 @@ ActiveRecord::Schema.define(version: 20160221183215) do
     t.datetime "updated_at",                          null: false
     t.string   "fName"
     t.string   "lName"
+    t.integer  "age"
+    t.datetime "dob"
+    t.string   "avatar"
+    t.string   "comments"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
