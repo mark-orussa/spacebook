@@ -15,7 +15,7 @@
 <% @galaxies.each do |galaxy| %>
     <div class='galaxy'>
       <% if galaxy.image != '' %>
-          <%= image_tag(galaxy.image) %>
+          <%= image_tag galaxy.image_url(:post).to_s %><br/>
       <% end %>
       <p ><span><%= @current_user.email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span><br>
         <%= galaxy.content %></p>

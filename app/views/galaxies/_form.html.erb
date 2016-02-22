@@ -1,4 +1,4 @@
-<%= form_for(@galaxy) do |f| %>
+<%= form_for @galaxy, :html => {:multipart => true} do |f| %>
     <% if @galaxy.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@galaxy.errors.count, "error") %> prohibited this galaxy from being saved:</h2>
@@ -20,8 +20,18 @@
         <%= f.text_area :content %>
       </div>
       <div class="field">
+        <%= f.label :privacy_level %><br>
+        <%= f.collection_select :privacy_id, PrivacyLevel.all, :id, :display_privacy_levels, {:selected => "3"} %>
+      </div>
+      <div class="field">
         <%= f.label :image %><br>
         <%= f.text_field :image %>
+      <div>
+        <%= f.file_field :image%><br>
+      </div>
+      <div>
+        <%= f.label :remote_image_url, "or image URL" %><br>
+        <%= f.text_field :remote_image_url %><br>
       </div>
       <div class="field">
         <%= f.label :tag %><br>
@@ -35,5 +45,6 @@
       <% else %>
           <%= submit_tag 'Save Post' %>
       <% end %>
+    </div>
     </div>
 <% end %>

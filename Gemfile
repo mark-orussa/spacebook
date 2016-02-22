@@ -4,6 +4,8 @@ gem 'faker'
 gem 'kaminari'
 gem 'devise'
 gem 'tinymce-rails'
+gem "rmagick"
+gem "carrierwave"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
