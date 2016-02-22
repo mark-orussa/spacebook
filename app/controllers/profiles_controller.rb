@@ -1,53 +1,51 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
 
-    current_profile_id = execute_statement("Select id from profiles where email=" + "'" + current_user.email + "'")
 
-    if current_profile_id != nil
-      redirect_to profile_path(current_profile_id[0])
-    end
+    redirect_to profile_path(current_user.id)
+
 
   end
 
   def show
-    respond_with(@profile)
+    respond_with(@user)
   end
 
   def new
-    @profile = Profile.new
-    respond_with(@profile)
+    @user = User.new
+    respond_with(@user)
   end
 
   def edit
   end
 
   def create
-    @profile = Profile.new(profile_params)
-    @profile.save
-    respond_with(@profile)
+    @user = User.new(user_params)
+    @user.save
+    respond_with(@user)
   end
 
   def update
-    @profile.update(profile_params)
-    respond_with(@profile)
+    @user.update(user_params)
+    redirect_to profile_path(current_user.id)
   end
 
   def destroy
-    @profile.destroy
-    respond_with(@profile)
+    @user.destroy
+    respond_with(@user)
   end
 
   private
-    def set_profile
-      @profile = Profile.find(params[:id])
+    def set_user
+      @user = User.find(params[:id])
 
     end
 
-    def profile_params
-      params.require(:profile).permit(:name, :age, :dob, :email, :avatar_image)
+    def user_params
+      params.require(:user).permit(:fName, :lName, :age, :dob, :avatar, :comments)
     end
 end

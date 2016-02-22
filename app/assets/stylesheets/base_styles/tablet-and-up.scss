@@ -26,8 +26,8 @@
         top: 0;
       }
       #findFriendsResults {
-        position:absolute;
-        right:0;
+        position: absolute;
+        right: 0;
         width: 20em;
         z-index: 10;
         @include boxShadow;
@@ -52,6 +52,39 @@
       span {
         font-weight: bold;
       }
+    }
+  }
+
+  //profile
+  #showPage {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #wrapper {
+    margin: 10px;
+    text-align: left;
+
+  }
+
+  #avatar {
+    float: left;
+    margin: 10px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  #comment {
+    margin: 20px;
+    padding: 30px;
+
+    strong {
+      font-weight: bold;
+      font-size: 1.5em;
+
     }
   }
 }

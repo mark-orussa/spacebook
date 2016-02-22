@@ -1,10 +1,10 @@
-<%= form_for(@profile) do |f| %>
-  <% if @profile.errors.any? %>
+<%= form_for(@user, :url => edit_profile_path, :html => {:method => :post}) do |f| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
-      <% @profile.errors.full_messages.each do |message| %>
+      <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :fName %><br>
+    <%= f.text_field :fName %>
   </div>
     <div class="field">
-      <%= f.label :avatar_image %><br>
-      <%= f.text_field :avatar_image %>
+      <%= f.label :lName %><br>
+      <%= f.text_field :lName %>
+    </div>
+    <div class="field">
+      <%= f.label :avatar %><br>
+      <%= f.text_field :avatar %>
     </div>
   <div class="field">
     <%= f.label :age %><br>
@@ -25,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :dob %><br>
-    <%= f.datetime_select :dob %>
+    <%= f.text_field :dob %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
   </div>
   <div class="actions">
     <%= f.submit %>
