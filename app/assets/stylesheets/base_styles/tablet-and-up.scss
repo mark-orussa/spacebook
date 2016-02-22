@@ -40,7 +40,10 @@
   }
 
   #galaxies {
+    display: inline-block;
+    margin-left: 200px;
     .galaxy {
+
       padding: 1% 2%;
       width: 360px;
       p {
