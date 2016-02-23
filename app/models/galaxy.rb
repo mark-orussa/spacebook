@@ -1,7 +1,5 @@
 class Galaxy < ActiveRecord::Base
-  attr_accessor :image, :remote_image_url
   belongs_to :user
-  mount_uploader :image, ImageUploader
   has_one :privacy_level
 
   def get_user(galaxy)
