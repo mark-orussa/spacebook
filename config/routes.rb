@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :profiles
   post 'profiles/:id/edit', to: 'profiles#update', as: 'update'
 

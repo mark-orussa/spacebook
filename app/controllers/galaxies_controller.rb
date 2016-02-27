@@ -41,7 +41,6 @@ class GalaxiesController < ApplicationController
   def create
     @galaxy = Galaxy.new(galaxy_params)
     @galaxy.save
-
     redirect_to(galaxies_path)
   end
 
@@ -72,11 +71,10 @@ class GalaxiesController < ApplicationController
   end
 
 
-
   def add_friend
     if params.has_key?(:friend_id) && params.has_key?(:friend_email)
       @add_friend = params
-      Galaxy.add_friend(params[:friend_id], current_user.id)
+      Galaxy.add_friend(current_user.id, params[:friend_id])
     else
       render :nothing => true, :status => :ok
     end

@@ -1,13 +1,154 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  author: MyString
-  content: MyText
-  image: MyString
-  tag: MyString
-
-two:
-  author: MyString
-  content: MyText
-  image: MyString
-  tag: MyString
+---
+Galaxy_1:
+  id: 1
+  author: 1
+  content: This is my first post!
+  image: ''
+  tag: sweet
+  created_at: 2016-02-08 05:01:41.683319000 Z
+  updated_at: 2016-02-08 05:01:41.683319000 Z
+  privacy_id: 2
+Galaxy_2:
+  id: 2
+  author: 1
+  content: This is my second post. It's twice and good as the first one.
+  image: ''
+  tag: ''
+  created_at: 2016-02-08 05:06:30.654096000 Z
+  updated_at: 2016-02-08 05:06:30.654096000 Z
+  privacy_id: 2
+Galaxy_3:
+  id: 3
+  author: 1
+  content: This is my third post and it just keeps getting better!
+  image: ''
+  tag: ''
+  created_at: 2016-02-08 05:08:41.152259000 Z
+  updated_at: 2016-02-08 05:08:41.152259000 Z
+  privacy_id: 2
+Galaxy_4:
+  id: 5
+  author: 1
+  content: This is another fine post.
+  image: ''
+  tag: ''
+  created_at: 2016-02-08 05:09:58.525393000 Z
+  updated_at: 2016-02-08 05:09:58.525393000 Z
+  privacy_id: 2
+Galaxy_5:
+  id: 6
+  author: 1
+  content: Sugar is bad for my teeth.
+  image: ''
+  tag: ''
+  created_at: 2016-02-08 05:38:27.998611000 Z
+  updated_at: 2016-02-08 05:38:27.998611000 Z
+  privacy_id: 2
+Galaxy_6:
+  id: 7
+  author: 1
+  content: hi there
+  image: ''
+  tag: ''
+  created_at: 2016-02-08 16:37:24.345010000 Z
+  updated_at: 2016-02-08 16:37:24.345010000 Z
+  privacy_id: 2
+Galaxy_7:
+  id: 8
+  author: 2
+  content: Test post 1
+  image: ''
+  tag: ''
+  created_at: 2016-02-12 23:57:30.175995000 Z
+  updated_at: 2016-02-12 23:57:30.175995000 Z
+  privacy_id: 2
+Galaxy_8:
+  id: 9
+  author: 2
+  content: This is test1's test post 2
+  image: ''
+  tag: ''
+  created_at: 2016-02-12 23:57:36.057113000 Z
+  updated_at: 2016-02-12 23:57:50.866407000 Z
+  privacy_id: 2
+Galaxy_9:
+  id: 10
+  author: 3
+  content: This is test user 2's first post.
+  image: ''
+  tag: ''
+  created_at: 2016-02-15 00:44:43.687338000 Z
+  updated_at: 2016-02-15 00:44:43.687338000 Z
+  privacy_id: 2
+Galaxy_10:
+  id: 11
+  author: 2
+  content: I like cheese
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 17:05:21.053210000 Z
+  updated_at: 2016-02-16 17:05:21.053210000 Z
+  privacy_id: 2
+Galaxy_11:
+  id: 12
+  author: 2
+  content: stuff here
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 17:05:25.260933000 Z
+  updated_at: 2016-02-16 17:05:25.260933000 Z
+  privacy_id: 2
+Galaxy_12:
+  id: 13
+  author: 2
+  content: hello world
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 17:05:29.515492000 Z
+  updated_at: 2016-02-16 17:05:29.515492000 Z
+  privacy_id: 2
+Galaxy_13:
+  id: 14
+  author: 4
+  content: bunch of stuff here
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 18:40:05.860182000 Z
+  updated_at: 2016-02-16 18:40:05.860182000 Z
+  privacy_id: 2
+Galaxy_14:
+  id: 15
+  author: 4
+  content: hello there
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 18:40:39.002123000 Z
+  updated_at: 2016-02-16 18:40:39.002123000 Z
+  privacy_id: 2
+Galaxy_15:
+  id: 16
+  author: 4
+  content: I like bacon
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 18:40:47.845160000 Z
+  updated_at: 2016-02-16 18:40:47.845160000 Z
+  privacy_id: 2
+Galaxy_16:
+  id: 17
+  author: 4
+  content: Cheese is also good
+  image: ''
+  tag: ''
+  created_at: 2016-02-16 18:40:55.512245000 Z
+  updated_at: 2016-02-16 18:40:55.512245000 Z
+  privacy_id: 2
+Galaxy_17:
+  id: 19
+  author: 2
+  content: This is the first post to have a set privacy level.
+  image: forum_pic_cropped_pencil.jpg
+  tag: ''
+  created_at: 2016-02-21 19:12:05.591500000 Z
+  updated_at: 2016-02-22 06:29:34.249955000 Z
+  privacy_id: 3

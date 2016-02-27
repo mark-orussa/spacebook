@@ -1,0 +1,16 @@
+<%= content_tag :div, id: 'notificationsContainer' do %>
+    <% if @notification_count > 0 %>
+        <div class="toggleButton">Notifications
+          <div id="notificationsCount"><%= @notification_count %></div>
+        </div>
+        <div class="toggleMe" id="notifications">
+          <% @notifications.each do |notification| %>
+              <% notificationMessage = link_to notification.fName + ' ' + notification.lName, :action => 'index', :user_id => notification.sender_id %>
+              <% if notification.short == 'friend request' %>
+                  <% notificationMessage += ' sent you a friend request.' %>
+              <% end %>
+              <%= content_tag :div, notificationMessage, class: 'notificationMessage' %>
+          <% end %>
+        </div>
+    <% end %>
+<% end %>

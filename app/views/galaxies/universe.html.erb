@@ -17,7 +17,7 @@
             <%= image_tag(galaxy.image) %>
         <% end %>
         <p>
-          <span><%= galaxy.get_user(galaxy).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
+          <span><%= galaxy.get_user(galaxy.author).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
           <% # This get_user() method is kind of lame, but galaxy.user returns nil  %>
           <%= galaxy.content %></p>
         <% if galaxy.author == current_user.id %>

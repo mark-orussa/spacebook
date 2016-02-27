@@ -2,7 +2,8 @@ require 'test_helper'
 
 class GalaxiesControllerTest < ActionController::TestCase
   setup do
-    @galaxy = galaxies(:one)
+    @galaxy = galaxies(:Galaxy_1)
+    @user = users(:User_1)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class GalaxiesControllerTest < ActionController::TestCase
 
   test "should create galaxy" do
     assert_difference('Galaxy.count') do
-      post :create, galaxy: { author: @galaxy.author, content: @galaxy.content, image: @galaxy.image, tag: @galaxy.tag }
+      post :create, galaxy: {}
     end
 
     assert_redirected_to galaxy_path(assigns(:galaxy))
@@ -34,8 +35,13 @@ class GalaxiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should_add_friend" do
+    get :add_friend, friend_id: @user, friend_email: @user
+    assert_response :success
+  end
+
   test "should update galaxy" do
-    patch :update, id: @galaxy, galaxy: { author: @galaxy.author, content: @galaxy.content, image: @galaxy.image, tag: @galaxy.tag }
+    patch :update, id: @galaxy, galaxy: {}
     assert_redirected_to galaxy_path(assigns(:galaxy))
   end
 

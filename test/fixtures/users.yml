@@ -1,11 +1,63 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+---
+User_1:
+  id: 1
+  email: mark@orussa.com
+  encrypted_password: "$2a$10$ufH47t40K6WY7BnfG7Yca.6LJy2czsim/fOnqIf/BqQUb80eA7TkS"
+  sign_in_count: 14
+  current_sign_in_at: 2016-02-15 08:34:37.357477000 Z
+  last_sign_in_at: 2016-02-14 20:17:19.719466000 Z
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  confirmation_token: jp5THFV-AxUKGY8ZZzbR
+  confirmed_at: 2016-02-05 20:26:02.615365000 Z
+  confirmation_sent_at: 2016-02-05 19:27:37.590444000 Z
+  created_at: 2016-02-05 19:27:37.385033000 Z
+  updated_at: 2016-02-15 08:34:37.358477000 Z
+User_2:
+  id: 2
+  email: test1@orussa.com
+  encrypted_password: "$2a$10$.usvizq3IoGazS7gF9nYVe/qAYCwVyDfculB5.94LYEijqEpJeEYi"
+  sign_in_count: 10
+  current_sign_in_at: 2016-02-25 16:38:15.170622000 Z
+  last_sign_in_at: 2016-02-24 19:56:01.387730000 Z
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  confirmation_token: cC_aRVPs8iP76HSx81gT
+  confirmed_at: 2016-02-12 20:02:21.248148000 Z
+  confirmation_sent_at: 2016-02-12 20:01:08.694155000 Z
+  created_at: 2016-02-12 20:01:08.484453000 Z
+  updated_at: 2016-02-25 16:38:15.171698000 Z
+  fName: Test1
+  lName: User
+  avatar: missing.jpg
+  comments: ''
+User_3:
+  id: 3
+  email: test2@orussa.com
+  encrypted_password: "$2a$10$ytmAx2JWJhRpDxAyouA3p.fH3gsDCenxjae/YclGcd8ciRsgZS0FC"
+  sign_in_count: 1
+  current_sign_in_at: 2016-02-14 21:07:04.161059000 Z
+  last_sign_in_at: 2016-02-14 21:07:04.161059000 Z
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  confirmation_token: rJ4VPMSfLp_fQ-h233YP
+  confirmed_at: 2016-02-14 21:06:57.604918000 Z
+  confirmation_sent_at: 2016-02-14 21:05:04.532846000 Z
+  created_at: 2016-02-14 21:05:04.328341000 Z
+  updated_at: 2016-02-14 21:07:04.161954000 Z
+User_4:
+  id: 4
+  email: test3@orussa.com
+  encrypted_password: "$2a$10$Qg/DzY.oqHM78hFs4IMcxuxnrKIIkKKgKsaiDNvA3Aai8.KtoIfBi"
+  sign_in_count: 1
+  current_sign_in_at: 2016-02-16 18:27:50.925114000 Z
+  last_sign_in_at: 2016-02-16 18:27:50.925114000 Z
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  confirmation_token: zX4GYzdCdwBoxxjdy46S
+  confirmed_at: 2016-02-16 18:27:16.392349000 Z
+  confirmation_sent_at: 2016-02-16 18:26:38.395737000 Z
+  created_at: 2016-02-16 18:26:38.206479000 Z
+  updated_at: 2016-02-16 18:27:50.925594000 Z
+  fName: John
+  lName: Smith

@@ -4,11 +4,7 @@ class ProfilesController < ApplicationController
   respond_to :html
 
   def index
-
-
     redirect_to profile_path(current_user.id)
-
-
   end
 
   def show
@@ -42,7 +38,6 @@ class ProfilesController < ApplicationController
   private
     def set_user
       @user = User.find(params[:id])
-
     end
 
     def user_params

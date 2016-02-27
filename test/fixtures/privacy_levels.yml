@@ -1,7 +1,19 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  description: MyString
-
-two:
-  description: MyString
+---
+PrivacyLevel_1:
+  id: 1
+  display: Only Me
+  description: Only I can see this.
+  created_at: 2016-02-20 03:32:25.224454000 Z
+  updated_at: 2016-02-20 03:32:25.224454000 Z
+PrivacyLevel_2:
+  id: 2
+  display: Friends
+  description: Only my friends can see this.
+  created_at: 2016-02-20 03:32:25.231961000 Z
+  updated_at: 2016-02-20 03:32:25.231961000 Z
+PrivacyLevel_3:
+  id: 3
+  display: Public
+  description: Anyone can see this.
+  created_at: 2016-02-20 03:32:25.234191000 Z
+  updated_at: 2016-02-20 03:32:25.234191000 Z

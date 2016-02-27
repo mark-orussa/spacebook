@@ -1,42 +1,43 @@
 <div id="galaxyStyle">
-<div id="galaxyTopContainer">
-  <% if @user && @user.id == current_user.id %>
-      <h1>My Galaxy</h1>
-  <% end %>
-  <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
-      <%= text_field_tag(:find_friends) %>
-      <%= submit_tag 'Find Friends' %>
-  <% end %>
-  <%= content_tag 'div', '', id: 'findFriendsResults' %>
-  <% if @user && @user.email %>
-      <h2><%= @user.email %>'s Galaxy</h2>
-  <% end %>
-  <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
-</div>
-<div id="galaxies" class="border"><span><%= paginate @galaxies %></span>
-<% @galaxies.each do |galaxy| %>
-    <div class='galaxy'>
-      <% if galaxy.image != '' %>
-          <%= image_tag galaxy.image_url(:post).to_s %><br/>
-      <% end %>
-      <p>
-        <span><%= galaxy.get_user(galaxy).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span><br>
-        <%= galaxy.content %></p>
-      <% if galaxy.author == current_user.id %>
-          <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
-          <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
-      <% end %>
-    </div>
-<% end %>
-</div>
-<div id="myFriends">
-  <h3>My Friends</h3>
-  <ul>
-    <% @friends.each do |friend| %>
-        <li>
-          <%= link_to friend.email, :action => 'index', :user_id => friend.id %>
-        </li>
+  <div id="galaxyTopContainer">
+    <% if @user && @user.id == current_user.id %>
+        <h1>My Galaxy</h1>
     <% end %>
-  </ul>
-</div>
+    <%= form_tag(find_friends_path, method: 'post', id: 'findFriendsForm', :remote => true) do %>
+        <%= text_field_tag(:find_friends) %>
+        <%= submit_tag 'Find Friends' %>
+    <% end %>
+    <%= content_tag 'div', '', id: 'findFriendsResults' %>
+    <% if @user && @user.email %>
+        <h2><%= @user.email %>'s Galaxy</h2>
+    <% end %>
+    <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
+  </div>
+  <div id="galaxies" class="border"><span><%= paginate @galaxies %></span>
+    <% @galaxies.each do |galaxy| %>
+        <div class='galaxy'>
+          <% if galaxy.image != '' %>
+              <%= image_tag galaxy.image_url(:post).to_s %><br/>
+          <% end %>
+          <p>
+            <span><%= galaxy.get_user(galaxy.author).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %>
+              ago &nbsp;</span><br>
+            <%= galaxy.content %></p>
+          <% if galaxy.author == current_user.id %>
+              <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
+              <%= link_to 'Delete', galaxy, method: :delete, data: {confirm: 'Are you sure?'} %>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+  <div id="myFriends">
+    <h3>My Friends</h3>
+    <ul>
+      <% @friends.each do |friend| %>
+          <li>
+            <%= link_to friend.email, :action => 'index', :user_id => friend.id %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
