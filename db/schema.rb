@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221183215) do
+ActiveRecord::Schema.define(version: 20160228181029) do
 
   create_table "friends", force: true do |t|
     t.string   "user_id"
@@ -22,13 +22,17 @@ ActiveRecord::Schema.define(version: 20160221183215) do
   end
 
   create_table "galaxies", force: true do |t|
-    t.integer  "author",     limit: 255
+    t.integer  "author",             limit: 255
     t.text     "content"
     t.string   "image"
     t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "privacy_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "privacy_levels", force: true do |t|
