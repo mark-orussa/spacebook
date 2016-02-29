@@ -13,8 +13,8 @@
 <div id="galaxies"><span><%= paginate @galaxies %></span>
   <% @galaxies.each do |galaxy| %>
       <div class='galaxy'>
-        <% if galaxy.image != '' %>
-            <%= image_tag(galaxy.image) %>
+        <% if galaxy.photo_file_name != nil %>
+            <%= image_tag galaxy.photo.url(:medium) %>
         <% end %>
         <p>
           <span><%= galaxy.get_user(galaxy.author).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>

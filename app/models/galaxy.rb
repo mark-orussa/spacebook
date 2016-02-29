@@ -1,8 +1,8 @@
 class Galaxy < ActiveRecord::Base
-  attr_accessor :image, :remote_image_url
   belongs_to :user
-  mount_uploader :image, ImageUploader
   has_one :privacy_level
+  has_attached_file :photo, styles: { large: "600x600>", medium: "300x300", thumb: "150x150#"}
+  validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def get_user(user_id)
     User.find(user_id)

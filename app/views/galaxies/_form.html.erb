@@ -23,15 +23,8 @@
         <%= f.label :privacy_level %><br>
         <%= f.collection_select :privacy_id, PrivacyLevel.all, :id, :display_privacy_levels, {:selected => "3"} %>
       </div>
-      <div class="field">
-        <%= f.label :image %><br>
-        <%= f.text_field :image %>
       <div>
-        <%= f.file_field :image%><br>
-      </div>
-      <div>
-        <%= f.label :remote_image_url, "or image URL" %><br>
-        <%= f.text_field :remote_image_url %><br>
+        <%= f.file_field :photo %>
       </div>
       <div class="field">
         <%= f.label :tag %><br>
