@@ -70,7 +70,6 @@ class GalaxiesController < ApplicationController
     end
   end
 
-
   def add_friend
     if params.has_key?(:friend_id) && params.has_key?(:friend_email)
       @add_friend = params

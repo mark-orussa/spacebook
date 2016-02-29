@@ -51,6 +51,22 @@ ActiveRecord::Schema.define(version: 20160228181029) do
     t.datetime "updated_at"
   end
 
+  create_table "notification_types", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "short"
+  end
+
+  create_table "notifications", force: true do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "notification_type_id"
+    t.boolean  "viewed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "privacy_levels", force: true do |t|
     t.string   "display"
     t.string   "description"

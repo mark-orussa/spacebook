@@ -24,4 +24,4 @@ config/application.yml
 
 .rbenv-gemsets
 
-public/uploads/*
+public/system/galaxies/photos
