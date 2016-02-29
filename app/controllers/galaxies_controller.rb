@@ -88,6 +88,14 @@ class GalaxiesController < ApplicationController
     friends.find_each do |friend|
       @friends << friend
     end
+
+    if params[:user_id] && params[:user_id] != current_user.id && User.find(params[:user_id])
+      friends_of_other = Galaxy.get_friends(params[:user_id])
+      @friends_of_other = Array.new
+      friends_of_other.find_each do |friend_of_other|
+        @friends_of_other << friend_of_other
+      end
+    end
   end
 
   private
