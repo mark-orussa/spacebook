@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160228181029) do
   end
 
   create_table "galaxies", force: true do |t|
-    t.integer  "author",     limit: 255
+    t.integer  "author",             limit: 255
     t.text     "content"
     t.string   "image"
     t.string   "tag"
@@ -33,22 +33,6 @@ ActiveRecord::Schema.define(version: 20160228181029) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-  end
-
-  create_table "notification_type", force: true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "short"
-  end
-
-  create_table "notifications", force: true do |t|
-    t.integer  "sender_id"
-    t.integer  "receiver_id"
-    t.integer  "notification_type_id"
-    t.boolean  "viewed"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "notification_types", force: true do |t|

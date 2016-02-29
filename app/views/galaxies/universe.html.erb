@@ -6,7 +6,7 @@
   <% end %>
   <%= content_tag 'div', '', id: 'findFriendsResults' %>
   <% if (current_user && current_user.email) %>
-      <h2><%= current_user.email %>'s Universe</h2>
+      <h2><%= current_user.fName %>'s Universe</h2>
   <% end %>
   <%= link_to 'New Post', new_galaxy_path, class: 'makeButton' %>
 </div>
@@ -17,7 +17,7 @@
             <%= image_tag galaxy.photo.url(:medium) %>
         <% end %>
         <p>
-          <span><%= galaxy.get_user(galaxy.author).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
+          <span><%= galaxy.get_user(galaxy.author).fName %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span>
           <% # This get_user() method is kind of lame, but galaxy.user returns nil  %>
           <%= galaxy.content %></p>
         <% if galaxy.author == current_user.id %>
