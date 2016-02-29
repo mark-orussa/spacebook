@@ -32,7 +32,7 @@
   <ul>
     <% @friends.each do |friend| %>
         <li>
-          <%= link_to friend.email, :action => 'index', :user_id => friend.id %>
+          <%= link_to friend.fName + " " + friend.lName , :action => 'index', :user_id => friend.id %>
         </li>
     <% end %>
   </ul>

@@ -26,7 +26,7 @@ class Galaxy < ActiveRecord::Base
   end
 
   def self.get_friends(current_user_id)
-    User.where("id IN (SELECT #{:user_id} AS friendID FROM #{:friends} WHERE #{:friend_id} = #{current_user_id} UNION SELECT #{:friend_id} AS friendID FROM #{:friends} WHERE #{:user_id} = #{current_user_id})").order(:email)
+    User.where("id IN (SELECT #{:user_id} AS friendID FROM #{:friends} WHERE #{:friend_id} = #{current_user_id} UNION SELECT #{:friend_id} AS friendID FROM #{:friends} WHERE #{:user_id} = #{current_user_id})").order(:fName)
   end
 
   def self.add_notification(sender_id, receiver_id, notification_id)
