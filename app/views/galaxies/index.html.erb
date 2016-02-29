@@ -20,7 +20,7 @@
           <%= image_tag galaxy.photo.url(:medium) %>
       <% end %>
       <p>
-        <span><%= galaxy.get_user(galaxy).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span><br>
+        <span><%= galaxy.get_user(galaxy.author).email %>:&nbsp;<%= time_ago_in_words(galaxy.created_at) %> ago &nbsp;</span><br>
         <%= galaxy.content %></p>
       <% if galaxy.author == current_user.id %>
           <%= link_to 'Edit', edit_galaxy_path(galaxy) %>
